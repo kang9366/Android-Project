@@ -66,6 +66,7 @@
             android:orientation="vertical">
             <!--            영상-->
             <LinearLayout
+                android:background="?attr/selectableItemBackground"
                 android:id="@+id/first"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -97,6 +98,7 @@
                     android:orientation="horizontal">
                     <de.hdodenhof.circleimageview.CircleImageView
                         xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:background="?attr/selectableItemBackground"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
                         android:src="@drawable/channel_img1" />
@@ -120,7 +122,269 @@
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+
+<!--            short-->
             <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="285dp"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/short_icon"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="Shorts"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="5dp"/>
+                    <ImageView
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="300dp"
+                        android:src="@drawable/more"/>
+                </LinearLayout>
+                <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent">
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                        <FrameLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="230dp"
+                            android:layout_marginLeft="10dp">
+                            <ImageView
+                                android:layout_width="155dp"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/short_img1"
+                                android:scaleType="fitXY"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="조회수 150만회"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="9sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="5dp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="에펠탑"
+                                android:textColor="@color/white"
+                                android:layout_gravity="left|bottom"
+                                android:textSize="10sp"
+                                android:layout_marginLeft="3dp"
+                                android:layout_marginBottom="20dp"/>
+
+                            <ImageView
+                                android:layout_width="10dp"
+                                android:layout_height="10dp"
+                                android:src="@drawable/more"
+                                android:layout_gravity="right"
+                                android:layout_marginTop="9dp"
+                                android:layout_marginRight="9dp"/>
+                        </FrameLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+<!--            영상-->
+            <LinearLayout
+                android:background="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -176,6 +440,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+                android:background="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -231,6 +496,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+                android:background="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
@@ -286,6 +552,7 @@
                 </LinearLayout>
             </LinearLayout>
             <LinearLayout
+                android:background="?attr/selectableItemBackground"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
