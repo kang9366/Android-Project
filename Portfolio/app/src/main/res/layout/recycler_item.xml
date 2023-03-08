@@ -16,14 +16,24 @@
         android:id="@+id/activityName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textColor="@color/black"
         android:textStyle="bold"
+        android:fontFamily="@font/nanumsquare"
         android:layout_gravity="center_vertical"/>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
     <TextView
         android:id="@+id/activityPeriod"
-        android:layout_marginLeft="100dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical" />
+        android:layout_gravity="center_vertical|right"
+        android:layout_marginRight="20dp"
+        android:textColor="@color/black"
+        android:textSize="11sp"
+        android:fontFamily="@font/nanumsquare"/>
 </LinearLayout>

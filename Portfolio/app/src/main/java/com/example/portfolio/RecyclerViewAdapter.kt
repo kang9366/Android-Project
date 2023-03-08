@@ -12,8 +12,8 @@ class RecyclerViewAdapter(private val items: ArrayList<RecyclerViewData>): Recyc
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = items[position]
         holder.image.setImageDrawable(item.image)
-        holder.name.text = holder.name.toString()
-        holder.period.text = holder.period.toString()
+        holder.ativityName.text = item.activityName
+        holder.period.text = item.period
     }
 
     override fun getItemCount(): Int {
@@ -28,7 +28,7 @@ class RecyclerViewAdapter(private val items: ArrayList<RecyclerViewData>): Recyc
     inner class ViewHolder(v: View): RecyclerView.ViewHolder(v){
         private var view: View = v
         val image: ImageView = view.findViewById(R.id.activityIcon)
-        val name: TextView = view.findViewById(R.id.activityName)
+        val ativityName: TextView = view.findViewById(R.id.activityName)
         val period: TextView = view.findViewById(R.id.activityPeriod)
     }
 }
