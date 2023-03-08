@@ -14,6 +14,7 @@ class MainActivity : AppCompatActivity() {
         add(R.drawable.image2)
         add(R.drawable.image3)
     }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -29,5 +30,17 @@ class MainActivity : AppCompatActivity() {
         supportActionBar!!.setDisplayShowTitleEnabled(false)
     }
 
-    
+    private fun initViewpager(){
+        val viewPager: ViewPager2 = binding.viewPager
+        viewPager.apply {
+            clipToPadding = false
+            clipChildren = false
+            offscreenPageLimit = 1
+            adapter = ViewPager2Adapter(this@MainActivity, imageList)
+        }
+        viewPager.apply {
+            setPageTransformer(MarginPageTransformer(100))
+            setPadding(200, 0, 200, 0)
+        }
+    }
 }
