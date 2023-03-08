@@ -2,7 +2,6 @@ package com.example.portfolio
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Toolbar
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.portfolio.databinding.ActivityMainBinding
@@ -23,6 +22,7 @@ class MainActivity : AppCompatActivity() {
 
         initViewpager()
         initToolbar()
+        initRecyclerView()
     }
 
     private fun initToolbar(){
@@ -53,7 +53,23 @@ class MainActivity : AppCompatActivity() {
                 }
             })
             setPageTransformer(MarginPageTransformer(100))
-            setPadding(200, 0, 200, 0)
+            setPadding(100, 0, 100, 0)
         }
+    }
+
+    private fun initRecyclerView(){
+        val recyclerView = binding.recyclerView
+        val item = ArrayList<RecyclerViewData>()
+
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+        item.add(RecyclerViewData(getDrawable(R.drawable.ic_club)!!, "GDSC", "2022.09 ~ 2023.08"))
+
+        val adapter = RecyclerViewAdapter(item)
+        recyclerView.adapter = adapter
     }
 }

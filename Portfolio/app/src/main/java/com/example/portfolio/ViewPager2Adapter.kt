@@ -31,5 +31,4 @@ class ViewPager2Adapter(
     }
 
     override fun getItemCount(): Int = imageList.size
-
 }
