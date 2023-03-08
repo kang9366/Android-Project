@@ -6,6 +6,7 @@ import android.widget.Toolbar
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
 import com.example.portfolio.databinding.ActivityMainBinding
+import me.relex.circleindicator.CircleIndicator3
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -31,14 +32,26 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViewpager(){
+        val circleIndicator: CircleIndicator3 = binding.circleIndicator
         val viewPager: ViewPager2 = binding.viewPager
+
+        circleIndicator.apply {
+            setViewPager(viewPager)
+            createIndicators(imageList.size, 0)
+        }
+
         viewPager.apply {
             clipToPadding = false
             clipChildren = false
             offscreenPageLimit = 1
             adapter = ViewPager2Adapter(this@MainActivity, imageList)
-        }
-        viewPager.apply {
+
+            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback(){
+                override fun onPageSelected(position: Int) {
+                    super.onPageSelected(position)
+                    circleIndicator.animatePageSelected(position%imageList.size)
+                }
+            })
             setPageTransformer(MarginPageTransformer(100))
             setPadding(200, 0, 200, 0)
         }
