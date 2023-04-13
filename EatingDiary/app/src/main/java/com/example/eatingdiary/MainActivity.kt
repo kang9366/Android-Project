@@ -9,8 +9,6 @@ import android.widget.TextView
 import android.widget.Toast
 import com.example.eatingdiary.Model.Data
 import com.google.zxing.integration.android.IntentIntegrator
-import retrofit2.Call
-import retrofit2.Callback
 import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
@@ -51,11 +49,12 @@ class MainActivity : AppCompatActivity() {
     private fun sendData(barcode: String){
         Toast.makeText(this, barcode, Toast.LENGTH_SHORT).show()
         val call = RetrofitBuilder.api.getFoodName(barcode)
-        call.enqueue(object : Callback<Data>{
-            override fun onResponse(call: Call<Data>, response: Response<Data>) {
+        call.enqueue(object : retrofit2.Callback<Data> {
+            override fun onResponse(call: retrofit2.Call<Data>, response: Response<Data>) {
                 val foodName = response.body()
                 if(response.isSuccessful){
                     if (foodName != null) {
+                        Log.d("김기류", response.message())
                         textView.text = "${foodName.C005.row[0].PRDLST_NM}"
                     }
                 }else{
@@ -63,7 +62,7 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
-            override fun onFailure(call: Call<Data>, t: Throwable) {
+            override fun onFailure(call: retrofit2.Call<Data>, t: Throwable) {
                 Log.d("Failure", "${t.message}")
             }
         })
